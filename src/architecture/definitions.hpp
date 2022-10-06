@@ -1,6 +1,6 @@
 // Copyright (c)
-#ifndef SRC_ARCHITECT_DEFINITIONS_HPP_
-#define SRC_ARCHITECT_DEFINITIONS_HPP_
+#ifndef SRC_ARCHITECTURE_DEFINITIONS_HPP_
+#define SRC_ARCHITECTURE_DEFINITIONS_HPP_
 
 // define public include headers
 #include <vector>
@@ -23,4 +23,4 @@ namespace architect {
   using string_type = std::string;
 }
 
-#endif  // SRC_ARCHITECT_DEFINITIONS_HPP_
+#endif  // SRC_ARCHITECTURE_DEFINITIONS_HPP_
