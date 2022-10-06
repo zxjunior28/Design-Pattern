@@ -1,4 +1,4 @@
-# Design pattern Implementation
+# Design Pattern Implementation
 >* Decorator Pattern
 
 ## Build with CMake by scripts
