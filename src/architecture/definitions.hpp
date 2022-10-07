@@ -17,7 +17,7 @@
 #include <queue>
 #include <cctype>
 
-namespace architect {
+namespace architecture {
   using size_type = size_t;
   using value_type = double;
   using string_type = std::string;
