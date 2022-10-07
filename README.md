@@ -1,5 +1,6 @@
 # Design Pattern Implementation
 >* Decorator Pattern
+>* Strategy Pattern
 
 ## Build with CMake by scripts
 ```console
