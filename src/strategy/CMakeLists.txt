@@ -1,4 +1,4 @@
-set(header_file definitions.hpp)
+set(header_file strategy.hpp)
 
 # include directories
 target_include_directories(${PROJECT_NAME} 
