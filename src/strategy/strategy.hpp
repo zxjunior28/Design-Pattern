@@ -17,6 +17,7 @@ class ISkill {
     virtual string_type getSkillName() = 0;
 };
 
+
 class  Waterball : public ISkill {
  public:
     Waterball() {}
@@ -32,7 +33,6 @@ class Colliding : public ISkill{
     int attack(Hero& attaking_hero, Hero& target) override;
     string_type getSkillName() override;
 };
-
 
 class Hero {
  public:
