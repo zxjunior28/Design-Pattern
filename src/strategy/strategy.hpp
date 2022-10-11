@@ -8,11 +8,13 @@ namespace architecture::strategy {
 
 class Hero;
 
+/* Interface ( Abstract class  with pure virtual function)*/
 class ISkill {
  public:
     ISkill() {}
     ~ISkill() = default;
-    virtual int attack(Hero& attaking_hero, Hero& attaked_hero);
+    virtual int attack(Hero& attaking_hero, Hero& attaked_hero) = 0;
+    virtual string_type getSkillName() = 0;
 };
 
 class  Waterball : public ISkill {
@@ -20,6 +22,7 @@ class  Waterball : public ISkill {
     Waterball() {}
     ~Waterball() = default;
     int attack(Hero& attaking_hero, Hero& target) override;
+    string_type getSkillName() override;
 };
 
 class Colliding : public ISkill{
@@ -27,6 +30,7 @@ class Colliding : public ISkill{
     Colliding() {}
     ~Colliding() = default;
     int attack(Hero& attaking_hero, Hero& target) override;
+    string_type getSkillName() override;
 };
 
 
@@ -36,7 +40,7 @@ class Hero {
     explicit Hero(string_type name): name_(name) {}
     ~Hero() = default;
 
-    void attack(Hero& target, ISkill skill);
+    void attack(Hero& target, ISkill& skill);
     string_type getName() {return name_;}
     int getHp() {return hp_ <= 0 ? 0 : hp_;}
     int getWisdom() {return wisdom_;}
@@ -57,16 +61,12 @@ class Hero {
 
 
 
-inline void Hero::attack(Hero& target, ISkill skill) {
+inline void Hero::attack(Hero& target, ISkill& skill) {
     int injury = skill.attack(*this, target);
-    std::cout << getName() << "  used " << typeid(skill).name() <<", the damage value is "<< injury << std::endl;
+    std::cout << getName() << " used " << skill.getSkillName() <<", the damage value is "<< injury << std::endl;
     std::cout << target.getName() << " has "<< target.getHp() <<" HP" << std::endl;
 }
 
-
-inline int ISkill::attack(Hero& attaking_hero, Hero& target) {
-    return 0;
-}
 
 inline int Waterball::attack(Hero& attaking_hero, Hero& target) {
     attaking_hero.lostMp(5);
@@ -75,10 +75,19 @@ inline int Waterball::attack(Hero& attaking_hero, Hero& target) {
     return injury;
 }
 
+inline string_type Waterball::getSkillName() {
+    return "Waterball";
+}
+
+
 inline int Colliding::attack(Hero& attaking_hero, Hero& target) {
     int injury = attaking_hero.getStrength() - target.getDefense();
     target.lostHp(injury);
     return injury;
+}
+
+inline string_type Colliding::getSkillName() {
+    return "Colliding";
 }
 
 

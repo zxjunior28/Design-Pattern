@@ -10,8 +10,10 @@ int main(int argc, char **argv) {
 
 
     // while ()
+    std::cout << "[Start]" << std::endl;
     hero1.attack(hero2, waterball);
     hero2.attack(hero1, colliding);
+    std::cout << "[End]" << std::endl;
 
 
     return 0;
