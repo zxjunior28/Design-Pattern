@@ -1,8 +1,8 @@
 # Design Pattern Implementation
 >* Strategy Pattern
--- Program to an interface, not an implementation
--- Favor object aggregation over class inheritance
--- Seperation of Concerns(SOC)
+    Program to an interface, not an implementation
+    Favor object aggregation over class inheritance
+    Seperation of Concerns(SOC)
 
 >* Decorator Pattern
 
