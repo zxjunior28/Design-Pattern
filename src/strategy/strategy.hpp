@@ -10,41 +10,33 @@ class Hero;
 
 class ISkill {
  public:
-    ISkill() = default;
+    ISkill() {}
     ~ISkill() = default;
-    virtual int attack(Hero attaking_hero, Hero attaked_hero);
+    virtual int attack(Hero& attaking_hero, Hero& attaked_hero);
 };
 
 class  Waterball : public ISkill {
  public:
-    Waterball() = default;
+    Waterball() {}
     ~Waterball() = default;
-    int attack(Hero attaking_hero, Hero target) override {
-        attaking_hero.lostMp(5);
-        int injury = attaking_hero.getWisdom()*2;
-        target.lostHp(injury);
-        retrun injury;
-    }
+    int attack(Hero& attaking_hero, Hero& target) override;
 };
 
 class Colliding : public ISkill{
  public:
-    Colliding() = default;
+    Colliding() {}
     ~Colliding() = default;
-    int attack(Hero attaking_hero, Hero target) override {
-        int injury = attaking_hero.getStrength() - target.getDefense();
-        target.lostHp(injury);
-        return injury;
-    }
+    int attack(Hero& attaking_hero, Hero& target) override;
 };
+
 
 class Hero {
  public:
-    Hero() = default;
-    Hero(string_type name, ISkill skill) : name_(name), skill_(skill) {}
+    // Hero() {} {;
+    explicit Hero(string_type name): name_(name) {}
     ~Hero() = default;
 
-    void attack(Hero target);
+    void attack(Hero& target, ISkill skill);
     string_type getName() {return name_;}
     int getHp() {return hp_ <= 0 ? 0 : hp_;}
     int getWisdom() {return wisdom_;}
@@ -52,6 +44,7 @@ class Hero {
     int getDefense() {return defense_;}
     void lostHp(int hp) {hp_ -= hp;}
     void lostMp(int mp) {mp_ -= mp;}
+    bool status();
 
  private:
     string_type name_;
@@ -60,14 +53,32 @@ class Hero {
     int strength_{150};
     int wisdom_{80};
     int defense_{50};
-    ISkill skill_;
-
 };
 
-inline void Hero::attack(Hero target) {
-    int injury = skill_.attack(*this, target);
-    std::cout << getName() << "  used " << typeid(skill_).name() <<", the damage value is "<< injury << std::endl;
-    std::cout << target.getName() << "has "<< target.getHp() <<" HP" << std::endl;
+
+
+inline void Hero::attack(Hero& target, ISkill skill) {
+    int injury = skill.attack(*this, target);
+    std::cout << getName() << "  used " << typeid(skill).name() <<", the damage value is "<< injury << std::endl;
+    std::cout << target.getName() << " has "<< target.getHp() <<" HP" << std::endl;
+}
+
+
+inline int ISkill::attack(Hero& attaking_hero, Hero& target) {
+    return 0;
+}
+
+inline int Waterball::attack(Hero& attaking_hero, Hero& target) {
+    attaking_hero.lostMp(5);
+    int injury = attaking_hero.getWisdom()*2;
+    target.lostHp(injury);
+    return injury;
+}
+
+inline int Colliding::attack(Hero& attaking_hero, Hero& target) {
+    int injury = attaking_hero.getStrength() - target.getDefense();
+    target.lostHp(injury);
+    return injury;
 }
 
 
