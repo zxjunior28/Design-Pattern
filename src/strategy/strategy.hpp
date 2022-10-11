@@ -11,8 +11,7 @@ class Hero;
 /* Interface ( Abstract class  with pure virtual function)*/
 class ISkill {
  public:
-    ISkill() {}
-    ~ISkill() = default;
+    virtual ~ISkill() = default;
     virtual int attack(Hero& attaking_hero, Hero& attaked_hero) = 0;
     virtual string_type getSkillName() = 0;
 };
@@ -20,16 +19,12 @@ class ISkill {
 
 class  Waterball : public ISkill {
  public:
-    Waterball() {}
-    ~Waterball() = default;
     int attack(Hero& attaking_hero, Hero& target) override;
     string_type getSkillName() override;
 };
 
 class Colliding : public ISkill{
  public:
-    Colliding() {}
-    ~Colliding() = default;
     int attack(Hero& attaking_hero, Hero& target) override;
     string_type getSkillName() override;
 };
