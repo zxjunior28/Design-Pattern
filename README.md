@@ -1,10 +1,10 @@
 # Design Pattern Implementation
->* Strategy Pattern
+>* Strategy Pattern  
     Program to an interface, not an implementation
     Favor object aggregation over class inheritance
     Seperation of Concerns(SOC)
 
->* Decorator Pattern
+>* Decorator Pattern  
 
 ## Build with CMake by scripts
 ```console
