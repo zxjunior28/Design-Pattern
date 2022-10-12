@@ -11,4 +11,5 @@
 $ source scripts/boost.sh
 ```
 # Reference
->* https://github.com/Johnny850807/Waterball-Youtube-Demo
+>* Strategy Pattern
+    - https://github.com/Johnny850807/Waterball-Youtube-Demo  

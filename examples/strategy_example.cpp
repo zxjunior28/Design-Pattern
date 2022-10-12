@@ -9,10 +9,10 @@ int main(int argc, char **argv) {
     architecture::strategy::Hero hero1("Kavy", waterball);
     architecture::strategy::Hero hero2("Jacky", colliding);
 
-    std::cout << "[Start 2]" << std::endl;
+    std::cout << "[Start]" << std::endl;
     hero1.attack(hero2);
     hero2.attack(hero1);
-    std::cout << "[End 2]" << std::endl;
+    std::cout << "[End]" << std::endl;
 
 
     return 0;
