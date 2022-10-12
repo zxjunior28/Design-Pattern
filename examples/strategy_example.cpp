@@ -2,18 +2,17 @@
 #include <strategy/strategy.hpp>
 
 int main(int argc, char **argv) {
-    architecture::strategy::Waterball waterball;
-    architecture::strategy::Colliding colliding;
-    // architecture::strategy::
-    architecture::strategy::Hero hero1("Kavy");
-    architecture::strategy::Hero hero2("Jacky");
 
+    auto waterball = std::make_shared<architecture::strategy::Waterball>();
+    auto colliding = std::make_shared<architecture::strategy::Colliding>();
 
-    // while ()
-    std::cout << "[Start]" << std::endl;
-    hero1.attack(hero2, waterball);
-    hero2.attack(hero1, colliding);
-    std::cout << "[End]" << std::endl;
+    architecture::strategy::Hero hero1("Kavy", waterball);
+    architecture::strategy::Hero hero2("Jacky", colliding);
+
+    std::cout << "[Start 2]" << std::endl;
+    hero1.attack(hero2);
+    hero2.attack(hero1);
+    std::cout << "[End 2]" << std::endl;
 
 
     return 0;
