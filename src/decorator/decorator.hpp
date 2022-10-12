@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Katelyn
+// Copyright (c) 2022 Katelyn Bai
 #ifndef SRC_DECORATOR_DECORATOR_HPP_
 #define SRC_DECORATOR_DECORATOR_HPP_
 
