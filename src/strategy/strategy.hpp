@@ -37,10 +37,10 @@ class Hero {
     int strength_{150};
     int wisdom_{80};
     int defense_{50};
-    std::shared_ptr<ISkill> skill_{nullptr};
+    std::shared_ptr<ISkill> skill_;
 
  public:
-    explicit Hero(string_type name, std::shared_ptr<ISkill> skill = {}): name_(name), skill_(std::move(skill)) {}
+    explicit Hero(string_type name, std::shared_ptr<ISkill> &&skill = {}): name_(name), skill_(std::move(skill)) {}
     ~Hero() = default;
 
     // void attack(Hero& target, ISkill& skill);
