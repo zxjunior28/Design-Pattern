@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Katelyn
+// Copyright (c) 2022 Katelyn Bai
 #include <strategy/strategy.hpp>
 
 int main(int argc, char **argv) {
