@@ -1,4 +1,4 @@
-// Copyright (c)
+// Copyright (c) Katelyn
 #ifndef SRC_ARCHITECTURE_DEFINITIONS_HPP_
 #define SRC_ARCHITECTURE_DEFINITIONS_HPP_
 
