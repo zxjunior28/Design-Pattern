@@ -1,4 +1,4 @@
-// Copyright (c) Katelyn
+// Copyright (c) 2022 Katelyn Bai
 #ifndef SRC_ARCHITECTURE_DEFINITIONS_HPP_
 #define SRC_ARCHITECTURE_DEFINITIONS_HPP_
 
