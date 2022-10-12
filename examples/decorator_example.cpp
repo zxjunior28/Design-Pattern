@@ -1,4 +1,4 @@
-// Copyright (c) 2022 LucaWei
+// Copyright (c) 2022 Katelyn
 #include <decorator/decorator.hpp>
 
 int main(int argc, char **argv) {
