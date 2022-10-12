@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Katelyn
+// Copyright (c) 2022 Katelyn Bai
 #ifndef SRC_STRATEGY_STRATEGY_HPP_
 #define SRC_STRATEGY_STRATEGY_HPP_
 
