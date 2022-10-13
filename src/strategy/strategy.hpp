@@ -87,5 +87,5 @@ inline string_type Colliding::getSkillName() {
 }
 
 
-}
+}  // namespace architecture::strategy
 #endif  // SRC_STRATEGY_STRATEGY_HPP_

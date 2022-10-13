@@ -10,7 +10,11 @@ target_link_libraries(${executable_name} PUBLIC ${PROJECT_NAME})
 
 set(example_name strategy_example)
 set(executable_name ${example_name})
-# add_gtest_with_libraries(${PROJECT_NAME}_${example_name} ${example_name}.cpp ${PROJECT_NAME})
+add_executable(${executable_name} ${example_name}.cpp)
+target_link_libraries(${executable_name} PUBLIC ${PROJECT_NAME})
+
+set(example_name factory_example)
+set(executable_name ${example_name})
 add_executable(${executable_name} ${example_name}.cpp)
 target_link_libraries(${executable_name} PUBLIC ${PROJECT_NAME})
 
