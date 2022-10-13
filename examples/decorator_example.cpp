@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
     std::cout << "  Price is  " << beef_spaghetti->GetPrice() << std::endl;
     delete beef_spaghetti;
 
-    /*case 1*/
+    /*case 2*/
     beef_spaghetti = new architecture::decorator::BeefSpaghetti;
     auto cheese = new architecture::decorator::Cheese(beef_spaghetti);
     std::cout << "[Name] " <<  cheese->GetName() << std::endl;
@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
     delete beef_spaghetti;
     delete cheese;
 
-    /*case 2*/
+    /*case 3*/
     beef_spaghetti = new architecture::decorator::BeefSpaghetti;
     auto ham = new architecture::decorator::Ham(cheese);
     std::cout << "[Name] " <<  ham->GetName() << std::endl;
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     delete beef_spaghetti;
     delete ham;
 
-    /*case 3*/
+    /*case 4*/
     beef_spaghetti = new architecture::decorator::BeefSpaghetti;
     cheese = new architecture::decorator::Cheese(beef_spaghetti);
     auto cheese2 = new architecture::decorator::Cheese(cheese);
