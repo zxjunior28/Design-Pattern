@@ -1,6 +1,11 @@
 # Design Pattern Implementation
+Gangs of Four (GoF) Design Patterns
+
 ## Creational
 >* Factory Pattern
+    - Simple Factory Pattern
+    - Factory Pattern
+    - Abstract Factory Pattern
 
 ## Structural
 >* Decorator Pattern  

@@ -1,4 +1,4 @@
-set(header_file factory.hpp)
+set(header_file simple_factory.hpp factory.hpp abstract_factory.hpp)
 
 # include directories
 target_include_directories(${PROJECT_NAME} 
