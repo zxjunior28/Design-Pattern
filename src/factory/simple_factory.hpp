@@ -4,9 +4,9 @@
 
 #include <architecture/definitions.hpp>
 
-namespace architecture::factory {
+namespace architecture::simplefactory {
 
-
+/*Simple Factory Pattern*/
 /* Interface ( Abstract class  with pure virtual function)*/
 // Product
 class Character {
@@ -44,19 +44,20 @@ enum CharacterTYPE {
 // Simple Factory
 class CharacterFactory {
  public:
-    Character *CreateCharacter(CharacterTYPE type) {
+    using char_ptr_type = std::shared_ptr<Character>;
+    char_ptr_type CreateCharacter(CharacterTYPE type) {
         switch (type) {
             case ARCHER:
-                return new Archer();
+                return std::make_shared<Archer>();
                 break;
             case WARRIOR:
-                return new Warrior();
+                return std::make_shared<Warrior>();
                 break;
             default:
-                return NULL;
+                return nullptr;
                 break;
         }
     }
 };
-}  // namespace architecture::factory
+}  // namespace architecture::simplefactory
 #endif  // SRC_FACTORY_SIMPLE_FACTORY_HPP_
