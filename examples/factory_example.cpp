@@ -12,10 +12,15 @@ int main(int argc, char **argv) {
     /*Simple Factory*/
     CharacterFactory characterFactory;
     auto Kavy = characterFactory.CreateCharacter(CharacterTYPE::ARCHER);
-    std::cout << "Kavy is the " << Kavy->getType() << std::endl;
+    if (Kavy)
+        std::cout << "Kavy is the " << Kavy->getType() << std::endl;
 
     auto Jacky = characterFactory.CreateCharacter(CharacterTYPE::WARRIOR);
-    std::cout << "Jacky is the " << Jacky->getType() << std::endl;
+    if (Jacky)
+        std::cout << "Jacky is the " << Jacky->getType() << std::endl;
+
+    delete Kavy;
+    delete Jacky;
 
     return 0;
 }
