@@ -6,7 +6,6 @@
 
 namespace architecture::factory {
 
-// 1. Simple Factory Pattern / Factory Pattern / Abstract
 /* Interface ( Abstract class  with pure virtual function)*/
 // Product
 class Character {

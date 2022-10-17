@@ -31,6 +31,18 @@ int main(int argc, char **argv) {
 
     const auto& warriorProducer = std::make_shared<WarriorProducer>();
     const auto& Jacky2 = warriorProducer->CreateCharacter();
-    if (Kavy2) std::cout << "Jacky is the " << Jacky2->getType() << std::endl;
+    if (Jacky2) std::cout << "Jacky is the " << Jacky2->getType() << std::endl;
+
+
+    std::cout << "---------------------" << std::endl;
+    /*Abstract Factory Pattern*/
+    using architecture::abstractfactory::IceCharacterFactory;
+    const auto& iceCharacterProducer = std::make_shared<IceCharacterFactory>();
+    const auto& Kavy3 = iceCharacterProducer->CreateArcher();
+    const auto& Jacky3 = iceCharacterProducer->CreateWarrior();
+    if (Kavy3) std::cout << "Kavy is the " << Kavy3->getType() << std::endl;
+    if (Jacky3) std::cout << "Jacky is the " << Jacky3->getType() << std::endl;
+    
+    
     return 0;
 }
