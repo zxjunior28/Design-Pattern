@@ -15,3 +15,7 @@ add_subdirectory(${pattern_name})
 # add Factory Pattern
 set(pattern_name factory)
 add_subdirectory(${pattern_name})
+
+# add Composite Pattern
+set(pattern_name composite)
+add_subdirectory(${pattern_name})
