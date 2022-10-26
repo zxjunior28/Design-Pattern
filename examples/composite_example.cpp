@@ -10,12 +10,18 @@ int main(int argc, char **argv) {
     Commodity* Milk = new Commodity("milk", 90, 5);
     Commodity* Meet = new Commodity("chicken", 100, 1);
     Commodity* drink = new Commodity("soda", 50, 2);
+    
+    /*add*/
     bag.add(Milk);
     bag.add(Meet);
     bag.add(drink);
     std::cout << "the total price is " << bag.calculation() << std::endl;
     bag.show();
 
+    /*remove*/
+    bag.remove(Milk);
+    std::cout << "\nthe total price is " << bag.calculation() << std::endl;
+    bag.show();
 
     delete Milk;
     delete Meet;

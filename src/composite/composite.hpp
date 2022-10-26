@@ -35,9 +35,22 @@ class Commodity : public Article {
 class Bags : public Article {
  public:
     explicit Bags(std::string name) : name_(name) {}
+    /*Manage*/
     void add(Article* atricle) {
         this->article_list_.push_back(atricle);
     }
+
+    void remove(Article* atricle) {
+        std::vector<Article*>::iterator it;
+        it = article_list_.begin();
+        while (it != article_list_.end()) {
+            if (*it == atricle) {
+                article_list_.erase(it);
+                break;
+            }
+        }
+    }
+
 
     double calculation() override {
         if (article_list_.empty())

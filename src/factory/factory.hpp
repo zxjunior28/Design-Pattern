@@ -55,6 +55,8 @@ class WarriorProducer : public CharacterFactory {
     char_ptr_type CreateCharacter() override {
         return std::make_shared<Warrior>();
     }
+//  private:
+//     std::vector<std::shared_ptr<Warrior>> warrior_list_;
 };
 
 
