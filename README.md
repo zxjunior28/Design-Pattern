@@ -8,8 +8,10 @@ Gangs of Four (GoF) Design Patterns
     - Abstract Factory Pattern
 
 ## Structural
->* Decorator Pattern  
-
+>* Decorator Pattern
+>* Composite Pattern
+>* Bridge Pattern  
+    - Decouple an abstraction from its implementation so that the two can vary independently. 
 ## Behavioral
 >* Strategy Pattern  
     - Program to an interface, not an implementation  
