@@ -23,11 +23,12 @@ class LeaveRequest {
 /*Abstract Handler Interface*/
 class Handler {
  public:
-    explicit Handler(std::string name) : name_(name) {}
+    explicit Handler(std::string name, int days) : name_(name), days_(days) {}
     void setSuccessor(std::weak_ptr<Handler> successor) {this->successor = successor;}
     virtual void handleRequest(const LeaveRequest& request) = 0;
  protected:
     std::string name_;
+    int days_;
     std::weak_ptr<Handler> successor;
 };
 
@@ -35,27 +36,27 @@ class Handler {
 /*Concrete Handler*/
 class Manager : public Handler {
  public:
-    explicit Manager(std::string name) : Handler(name) {}
+    explicit Manager(std::string name, int days) : Handler(name, days) {}
     void handleRequest(const LeaveRequest& request) override;
 };
 
 /*Concrete Handler*/
 class Director : public Handler {
  public:
-    explicit Director(std::string name) : Handler(name) {}
+    explicit Director(std::string name, int days) : Handler(name, days) {}
     void handleRequest(const LeaveRequest& request) override;
 };
 
 /*Concrete Handler*/
 class GeneralManager : public Handler {
  public:
-    explicit GeneralManager(std::string name) : Handler(name) {}
+    explicit GeneralManager(std::string name, int days) : Handler(name, days) {}
     void handleRequest(const LeaveRequest& request) override;
 };
 
 
 void Manager::handleRequest(const LeaveRequest& request) {
-    if (request.getLeaveDays() < 3) {
+    if (request.getLeaveDays() < days_) {
         std::cout <<request.getName() << "'s " << request.getLeaveDays() << "-day leave is approved by "
         <<"manager "<< name_ << std::endl;
     } else {
@@ -66,7 +67,7 @@ void Manager::handleRequest(const LeaveRequest& request) {
 }
 
 void Director::handleRequest(const LeaveRequest& request) {
-    if (request.getLeaveDays() < 7) {
+    if (request.getLeaveDays() < days_) {
         std::cout <<request.getName() << "'s " << request.getLeaveDays() << "-day leave is approved by "
         <<"director "<< name_ << std::endl;
     } else {
@@ -77,7 +78,7 @@ void Director::handleRequest(const LeaveRequest& request) {
 }
 
 void GeneralManager::handleRequest(const LeaveRequest& request) {
-    if (request.getLeaveDays() < 14) {
+    if (request.getLeaveDays() < days_) {
         std::cout <<request.getName() << "'s " << request.getLeaveDays() << "-day leave is approved by "
         <<"general manager "<< name_ << std::endl;
     } else {
@@ -85,14 +86,10 @@ void GeneralManager::handleRequest(const LeaveRequest& request) {
             this->successor.lock()->handleRequest(request);
         } else {
             std::cout <<request.getName() << "'s " << request.getLeaveDays() << "-day leave is not approved. ";
-            std::cout << "(exceeded the fourteen (14) leave days per year given to an employee)" << std::endl;
+            std::cout << "(exceeded the "<< days_ <<" leave days per year given to an employee)" << std::endl;
         }
     }
 }
-
-
-
-
 
 
 

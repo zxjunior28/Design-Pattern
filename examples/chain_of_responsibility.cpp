@@ -12,25 +12,25 @@ int main(int argc, char **argv) {
 
 
     std::shared_ptr<Handler> manager_ptr, director_ptr, generalmanager_ptr;
-    manager_ptr = std::make_shared<Manager>("Wang");
-    director_ptr = std::make_shared<Director>("Chang");
-    generalmanager_ptr = std::make_shared<GeneralManager>("Lin");
+    manager_ptr = std::make_shared<Manager>("Wang", 5);
+    director_ptr = std::make_shared<Director>("Chang", 10);
+    generalmanager_ptr = std::make_shared<GeneralManager>("Lin", 15);
 
     /*set successor*/
     manager_ptr->setSuccessor(director_ptr);
     director_ptr->setSuccessor(generalmanager_ptr);
 
     /*Request*/
-    auto request1 = std::make_shared<LeaveRequest>("Katelyn", 2);
+    auto request1 = std::make_shared<LeaveRequest>("Katelyn", 3);
     manager_ptr->handleRequest(*request1);
 
-    auto request2 = std::make_shared<LeaveRequest>("Katelyn", 5);
+    auto request2 = std::make_shared<LeaveRequest>("Katelyn", 6);
     manager_ptr->handleRequest(*request2);
 
-    auto request3 = std::make_shared<LeaveRequest>("Katelyn", 10);
+    auto request3 = std::make_shared<LeaveRequest>("Katelyn", 12);
     manager_ptr->handleRequest(*request3);
 
-    auto request4 = std::make_shared<LeaveRequest>("Katelyn", 15);
+    auto request4 = std::make_shared<LeaveRequest>("Katelyn", 20);
     manager_ptr->handleRequest(*request4);
 
 
