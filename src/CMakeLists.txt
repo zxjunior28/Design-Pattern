@@ -19,3 +19,11 @@ add_subdirectory(${pattern_name})
 # add Composite Pattern
 set(pattern_name composite)
 add_subdirectory(${pattern_name})
+
+# add Bridge Pattern
+set(pattern_name bridge)
+add_subdirectory(${pattern_name})
+
+# add Chain Pattern
+set(pattern_name chain_of_responsibility)
+add_subdirectory(${pattern_name})

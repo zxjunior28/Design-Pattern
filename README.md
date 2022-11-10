@@ -16,7 +16,8 @@ Gangs of Four (GoF) Design Patterns
 >* Strategy Pattern  
     - Program to an interface, not an implementation  
     - Favor object aggregation over class inheritance  
-    - Seperation of Concerns(SOC) 
+    - Seperation of Concerns(SOC)
+>* Chain of responsibility
 
 ## Build with CMake by scripts
 ```console

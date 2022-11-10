@@ -28,5 +28,11 @@ set(executable_name ${example_name})
 add_executable(${executable_name} ${example_name}.cpp)
 target_link_libraries(${executable_name} PUBLIC ${PROJECT_NAME})
 
+
+set(example_name chain_of_responsibility)
+set(executable_name ${example_name})
+add_executable(${executable_name} ${example_name}.cpp)
+target_link_libraries(${executable_name} PUBLIC ${PROJECT_NAME})
+
 unset(project_name)
 unset(example_name)
