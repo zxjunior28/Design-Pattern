@@ -7,4 +7,5 @@ cmake --build build/ -j4
 # ./build/bin/factory_example
 # ./build/bin/composite_example
 ./build/bin/bridge_example
+./build/bin/chain_of_responsibility
 # "data/case0.txt"

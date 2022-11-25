@@ -12,9 +12,9 @@ int main(int argc, char **argv) {
 
 
     std::shared_ptr<Handler> manager_ptr, director_ptr, generalmanager_ptr;
-    manager_ptr = std::make_shared<Manager>("Wang", 5);
-    director_ptr = std::make_shared<Director>("Chang", 10);
-    generalmanager_ptr = std::make_shared<GeneralManager>("Lin", 15);
+    manager_ptr = std::make_shared<Manager>("Jeting", 5);
+    director_ptr = std::make_shared<Director>("Leo", 10);
+    generalmanager_ptr = std::make_shared<GeneralManager>("Ethen", 15);
 
     /*set successor*/
     manager_ptr->setSuccessor(director_ptr);
