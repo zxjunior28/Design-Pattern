@@ -27,3 +27,7 @@ add_subdirectory(${pattern_name})
 # add Chain Pattern
 set(pattern_name chain_of_responsibility)
 add_subdirectory(${pattern_name})
+
+# add Builder Pattern
+set(pattern_name builder)
+add_subdirectory(${pattern_name})
