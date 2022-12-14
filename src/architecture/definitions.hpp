@@ -17,6 +17,7 @@
 #include <queue>
 #include <cctype>
 #include <list>
+#include <set>
 
 namespace architecture {
   using size_type = size_t;
