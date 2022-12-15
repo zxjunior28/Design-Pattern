@@ -21,5 +21,12 @@ int main(int argc, char **argv) {
     Alice->send("I'm fine.");
     Tom->send("Bye!");
 
+
+    // delete
+    delete Line;
+    delete Bob;
+    delete Tom;
+    delete Alice;
+
     return 0;
 }
