@@ -22,9 +22,16 @@ Gangs of Four (GoF) Design Patterns
 >* Chain of responsibility
 >* Mediator
 
-## Build with CMake by scripts
+## Build
+###  Build using scripts
 ```console
 $ source scripts/boost.sh
+```
+### Build using CMake directly
+```console
+$ cmake -S . -B build/ -DBUILD_EXAMPLES=ON
+$ cmake --build build/ -j4
+$ ./build/bin/bridge_example
 ```
 # Reference
 >* Strategy Pattern
