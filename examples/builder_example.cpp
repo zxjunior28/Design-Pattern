@@ -4,12 +4,12 @@
 
 int main(int argc, char **argv) {
 
-    /// Construcotr Overloading
+    /// Method 1 : Construcotr Overloading
     // using architecture::builder::Computer;
     // Computer* myComputer = new Computer("Apple", "Apple", "Apple");
     // myComputer->showInfomation();
 
-    /// Builder Pattern
+    /// Method 2 : Builder Pattern
     using architecture::builder::ComputerBuilder;
     using architecture::builder::Director;
 
