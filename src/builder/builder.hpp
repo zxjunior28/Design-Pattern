@@ -19,7 +19,7 @@ class Computer{
     ~Computer() = default;
     void showInfomation() {
         std::cout << " CPU : " << cpu_ << std::endl
-                  << " Mother Board: " << mb_ << std::endl
+                  << " MotherBoard: " << mb_ << std::endl
                   << " HDD: " << hdd_ << std::endl
                   << " VGA: " << vga_ << std::endl
                   << " Key Board: " << key_board_ << std::endl

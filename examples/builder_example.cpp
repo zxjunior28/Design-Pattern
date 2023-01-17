@@ -8,6 +8,7 @@ int main(int argc, char **argv) {
     // using architecture::builder::Computer;
     // Computer* myComputer = new Computer("Apple", "Apple", "Apple");
     // myComputer->showInfomation();
+    // delete myComputer;
 
     /// Method 2 : Builder Pattern
     using architecture::builder::ComputerBuilder;
