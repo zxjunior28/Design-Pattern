@@ -35,3 +35,8 @@ add_subdirectory(${pattern_name})
 # add Mediator Pattern
 set(pattern_name mediator)
 add_subdirectory(${pattern_name})
+
+
+# add Observer Pattern
+set(pattern_name observer)
+add_subdirectory(${pattern_name})
