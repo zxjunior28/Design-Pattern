@@ -2,6 +2,7 @@
 Gangs of Four (GoF) Design Patterns
 
 # Design Pattern
+
 ## Creational
 >* Factory
     - Factory
