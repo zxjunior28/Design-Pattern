@@ -21,6 +21,8 @@ Gangs of Four (GoF) Design Patterns
     - Seperation of Concerns(SOC)
 >* Chain of responsibility
 >* Mediator
+>* Observer
+>* Template Method
 
 ## Build
 ###  Build using scripts
