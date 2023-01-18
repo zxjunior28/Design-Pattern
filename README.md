@@ -5,7 +5,7 @@ Gangs of Four (GoF) Design Patterns
 
 ## Creational
 >* Builder
->* Factory
+>* Factory  
     - Simple Factory
     - Factory
     - Abstract Factory
