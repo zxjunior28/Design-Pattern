@@ -40,3 +40,7 @@ add_subdirectory(${pattern_name})
 # add Observer Pattern
 set(pattern_name observer)
 add_subdirectory(${pattern_name})
+
+# add Template Method Pattern
+set(pattern_name template_method)
+add_subdirectory(${pattern_name})

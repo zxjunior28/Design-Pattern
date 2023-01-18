@@ -18,6 +18,8 @@
 #include <cctype>
 #include <list>
 #include <set>
+#include <fstream>
+#include <sstream>
 
 namespace architecture {
   using size_type = size_t;
