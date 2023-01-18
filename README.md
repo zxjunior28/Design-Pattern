@@ -23,12 +23,12 @@ Gangs of Four (GoF) Design Patterns
 >* Observer
 >* Template Method
 
-## Build
-###  Build using scripts
+# Build
+##  Build using scripts
 ```console
 $ source scripts/boost.sh
 ```
-### Build using CMake directly
+## Build using CMake directly
 ```console
 $ cmake -S . -B build/ -DBUILD_EXAMPLES=ON
 $ cmake --build build/ -j4
