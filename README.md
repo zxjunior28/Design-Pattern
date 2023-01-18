@@ -36,5 +36,5 @@ $ ./build/bin/bridge_example
 ```
 # Reference
 >* https://refactoring.guru/ 
->* Strategy Pattern
-    - https://github.com/Johnny850807/Waterball-Youtube-Demo 
+>* Strategy Pattern  
+    - https://github.com/Johnny850807/Waterball-Youtube-Demo  
