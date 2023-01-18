@@ -36,5 +36,6 @@ $ cmake --build build/ -j4
 $ ./build/bin/bridge_example
 ```
 # Reference
+>* https://refactoring.guru/ 
 >* Strategy Pattern
-    - https://github.com/Johnny850807/Waterball-Youtube-Demo  
+    - https://github.com/Johnny850807/Waterball-Youtube-Demo 
