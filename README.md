@@ -1,8 +1,6 @@
 # Design Pattern Implementation
 Gangs of Four (GoF) Design Patterns
 
-# Design Pattern
-
 ## Creational
 >* Builder
 >* Factory  
