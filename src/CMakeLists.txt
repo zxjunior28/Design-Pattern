@@ -44,3 +44,8 @@ add_subdirectory(${pattern_name})
 # add Template Method Pattern
 set(pattern_name template_method)
 add_subdirectory(${pattern_name})
+
+# add Prototype Pattern
+set(pattern_name prototype)
+add_subdirectory(${pattern_name})
+
