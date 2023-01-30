@@ -6,7 +6,7 @@ int main(int argc, char **argv) {
     auto figure = std::make_shared<Shape> (1, "schematic diagram");
     figure->show();
 
-    /// protype
+    /// prototype
     auto figure_copy = figure->clone();
     figure_copy->show();
 
