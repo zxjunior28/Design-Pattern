@@ -29,15 +29,15 @@ class Podcast : public ISubject {
  public:
   // add subscriber
   void add(const observer_ptr& ob) override {
-    observer_list_.emplace(ob);
+    observers.emplace(ob);
   }
   // remove subscriber
   void remove(const observer_ptr& ob) override {
-    observer_list_.erase(ob);
+    observers.erase(ob);
   }
   // notify subscribers
   void notify() override {
-    for (const auto& ob : observer_list_)
+    for (const auto& ob : observers)
       ob->update(message_);
   }
   // create message
@@ -46,7 +46,7 @@ class Podcast : public ISubject {
   }
 
  private:
-  std::set<IObserver*> observer_list_;
+  std::set<IObserver*> observers;
   string_type message_;
 };
 
