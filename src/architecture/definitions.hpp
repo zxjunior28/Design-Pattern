@@ -20,6 +20,7 @@
 #include <set>
 #include <fstream>
 #include <sstream>
+#include <unordered_map>
 
 namespace architecture {
   using size_type = size_t;
