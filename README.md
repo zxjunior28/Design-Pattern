@@ -14,6 +14,8 @@ Gangs of Four (GoF) Design Patterns
 >* Composite
 >* Bridge  
     - Decouple an abstraction from its implementation so that the two can vary independently. 
+>* Flyweight
+
 ## Behavioral
 >* Strategy  
     - Program to an interface, not an implementation  
