@@ -56,6 +56,7 @@ class Flyweight {
   CarType *car_type_;
  public:
   explicit Flyweight(const CarType *car_type) : car_type_(new CarType(*car_type)) {}
+  /// Copy constructors
   Flyweight(const Flyweight &other) : car_type_(new CarType(*other.car_type_)) {}
   ~Flyweight() {
     delete car_type_;

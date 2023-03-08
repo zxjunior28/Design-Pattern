@@ -4,7 +4,7 @@
 int main(int argc, char **argv) {
     using architecture::flyweight::FlyweightFactory;
     using architecture::flyweight::CarType;
-    
+
 
     // std::cout << "hi! flyweight~" << std::endl;
 
